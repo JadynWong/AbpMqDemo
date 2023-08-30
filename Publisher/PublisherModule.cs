@@ -24,7 +24,7 @@ namespace Publisher
             });
             Configure<AbpRabbitMqEventBusOptions>(options =>
             {
-                options.ClientName = "OnlyPublisher";
+                options.ClientName = "OnlyPublisher";//Important! Must be different from the consumer's ClientName
                 options.ExchangeName = "TestMessages";
             });
         }

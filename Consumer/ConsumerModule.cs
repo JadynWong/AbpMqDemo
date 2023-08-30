@@ -22,8 +22,9 @@ namespace Consumer
                 options.Connections.Default.UserName = "admin";
                 options.Connections.Default.Password = "admin";
             });
-            Configure<AbpRabbitMqEventBusOptions>(options => {
-                options.ClientName = "Consumer";
+            Configure<AbpRabbitMqEventBusOptions>(options =>
+            {
+                options.ClientName = "Consumer";//Important! Must be different from the publisher's ClientName
                 options.ExchangeName = "TestMessages";
             });
         }
